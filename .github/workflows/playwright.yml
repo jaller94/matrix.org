@@ -21,6 +21,7 @@ jobs:
         archive="zola-${version}-x86_64-unknown-linux-gnu.tar.gz"
         curl -L "https://github.com/getzola/zola/releases/download/${version}/${archive}" -o "$archive"
         tar xf "$archive"
+        pwd >> $GITHUB_PATH
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
